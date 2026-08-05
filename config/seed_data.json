@@ -1,0 +1,112 @@
+{
+  "listings": [
+    {
+      "name": "Aarav Auto Care",
+      "category": "Car Repairs",
+      "description": "Resident-recommended car repair and accessories service.",
+      "area": "Kharadi",
+      "accessibility": "Step-free reception",
+      "verified": 1,
+      "parkeasy_supported": 0
+    },
+    {
+      "name": "Sunrise Dairy",
+      "category": "Dairy Services",
+      "description": "Daily milk and dairy delivery for nearby communities.",
+      "area": "Kharadi",
+      "accessibility": "Phone ordering available",
+      "verified": 1,
+      "parkeasy_supported": 0
+    },
+    {
+      "name": "CityCare Diagnostics",
+      "category": "Healthcare",
+      "description": "Diagnostics centre with accessible entrance and lift.",
+      "area": "Wagholi",
+      "accessibility": "Wheelchair access, lift, accessible toilet",
+      "verified": 1,
+      "parkeasy_supported": 1
+    },
+    {
+      "name": "Riverfront Mall",
+      "category": "Nearby Places",
+      "description": "Shopping, dining and cinema destination.",
+      "area": "East Pune",
+      "accessibility": "Accessible parking, wheelchair assistance",
+      "verified": 1,
+      "parkeasy_supported": 1
+    }
+  ],
+  "notices": [
+    {
+      "title": "Long-weekend traffic advisory",
+      "body": "Higher traffic is possible near shopping and entertainment areas from Friday evening through Sunday.",
+      "area": "East Pune",
+      "source": "Community Admin + official holiday calendar",
+      "evidence_status": "Estimated",
+      "confidence": "Medium",
+      "effective_from": "2026-08-14T17:00:00",
+      "effective_to": "2026-08-16T23:00:00"
+    },
+    {
+      "title": "Road access maintenance",
+      "body": "One approach road will have partial lane restrictions during morning hours.",
+      "area": "Kharadi",
+      "source": "Municipal notice",
+      "evidence_status": "Verified",
+      "confidence": "High",
+      "effective_from": "2026-07-25T07:00:00",
+      "effective_to": "2026-07-25T12:00:00"
+    }
+  ],
+  "events": [
+    {
+      "title": "CBSE result near-future community impact",
+      "event_type": "Education Result",
+      "impact_window": "First weekend after result",
+      "area": "East Pune",
+      "summary": "Possible increase in family visits to malls, restaurants and cinemas; monitor local traffic.",
+      "source": "Official result announcement + local pattern assumption",
+      "confidence": "Medium",
+      "status": "Monitoring"
+    },
+    {
+      "title": "Major sports final",
+      "event_type": "Sports",
+      "impact_window": "Same evening",
+      "area": "East Pune",
+      "summary": "Possible higher restaurant and screening-venue activity.",
+      "source": "Official sports schedule",
+      "confidence": "Medium",
+      "status": "Confirmed event"
+    },
+    {
+      "title": "Local election result and announced gathering",
+      "event_type": "Civic/Political",
+      "impact_window": "Following weekend",
+      "area": "Central Pune",
+      "summary": "Possible traffic diversions near the announced public gathering. Politically neutral operational notice only.",
+      "source": "Official public notice",
+      "confidence": "Medium-High",
+      "status": "Confirmed operational impact"
+    }
+  ],
+  "recommendations": [
+    {
+      "title": "Verify weekend traffic advisory",
+      "reason": "Education-result and long-weekend signals overlap.",
+      "priority": "P2",
+      "evidence": "Official calendars and local impact assumptions",
+      "confidence": "Medium",
+      "status": "Pending"
+    },
+    {
+      "title": "Reconfirm Riverfront Mall accessibility details",
+      "reason": "Accessibility information is older than the review threshold.",
+      "priority": "P3",
+      "evidence": "Listing review date",
+      "confidence": "High",
+      "status": "Pending"
+    }
+  ]
+}

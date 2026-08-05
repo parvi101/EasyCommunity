@@ -1,0 +1,203 @@
+{
+  "product": "EasyCommunity_v0.1.1",
+  "generated_at": "2026-07-22T18:38:19.757438+00:00",
+  "validation": "PASS WITH SAFEGUARDS",
+  "installer_file": "INSTALL_AND_RUN_EasyCommunity.bat",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "f430ade21789adda99b0c064e8ea1d6926ec9e0d6e5d80f93fa9cf14cf056e4d",
+      "bytes": 45
+    },
+    {
+      "path": "BUILD_SCOPE_AND_LIMITATIONS.md",
+      "sha256": "c36dae1887e51903af85cc73b127fe216a5dfab29f0013fd392682b30a7da1dc",
+      "bytes": 986
+    },
+    {
+      "path": "INSTALL_AND_RUN_EasyCommunity.bat",
+      "sha256": "4600929006b918ff02a3bd0fea68cdff70bd33501de40e265122a76f825f346e",
+      "bytes": 530
+    },
+    {
+      "path": "README.md",
+      "sha256": "f6cfb79510a09d1bf752043ab3841d8fa1bda9fcdbff77609eadb037d21de9ad",
+      "bytes": 488
+    },
+    {
+      "path": "RESET_DEMO_DATA.bat",
+      "sha256": "8806ab86158f0558e2261348f3f21b15db4104c8e989dcc52e7a098e5af54501",
+      "bytes": 128
+    },
+    {
+      "path": "RESET_DEMO_DATA.sh",
+      "sha256": "99d46adefe97313d84bcdbfa1362c3c7f64dccbac690dafe85af67cc25c19131",
+      "bytes": 127
+    },
+    {
+      "path": "VALIDATION_REPORT.md",
+      "sha256": "412f33f4b05a9e3fb43ec3b74f916e48ad36125b27b5c80aaedaba39421fde1c",
+      "bytes": 1408
+    },
+    {
+      "path": "app.py",
+      "sha256": "bf91ee95434053a46f59e0c266cf1182cd43a003a2b3acc454de06243e38651e",
+      "bytes": 4855
+    },
+    {
+      "path": "config/app_config.json",
+      "sha256": "1aa7e95437699f6bf408f8d1ced5bb33541a723a409d111978c8d450ab06891a",
+      "bytes": 114
+    },
+    {
+      "path": "config/seed_data.json",
+      "sha256": "d5013eba2bf414b533929e0a17b2fa930211ceb945b4e3426e3a21bc85e8180a",
+      "bytes": 3819
+    },
+    {
+      "path": "docs/ACCESSIBILITY.md",
+      "sha256": "03a5830043378aba25c1e818ca1e45964e80171c8db8da415524ffdb374f6408",
+      "bytes": 534
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "384ccd85ae536dbc64ebf45ec9a904990a6ed8f871e8a37c4d93309e3a7c7d0e",
+      "bytes": 865
+    },
+    {
+      "path": "docs/COUNCIL_DECISION_LOG.md",
+      "sha256": "094f2fe97281afa5db0e78499a61bd54d18bc5b54bf6626451979b2bf6ddc04e",
+      "bytes": 492
+    },
+    {
+      "path": "docs/DECISION_REGISTER.md",
+      "sha256": "65dff3214c57b3313ae6ec216b82f51602b6064667f515cc070401964675be28",
+      "bytes": 259
+    },
+    {
+      "path": "docs/EVIDENCE_REGISTER.md",
+      "sha256": "350dff6b44613285e45feca7b80d0caf4fd2145c58b753cc95da51cfce80bb30",
+      "bytes": 401
+    },
+    {
+      "path": "docs/IP_SCREENING_REGISTER.md",
+      "sha256": "20fdc37b8e19ed83f30cf97fc51815f7b324d2455be01359d7861ea02ddc0eeb",
+      "bytes": 434
+    },
+    {
+      "path": "docs/LESSONS_LEARNED_REGISTER.md",
+      "sha256": "c75c960a2d54caf5c2389cdc75c8c4462081357fda5770894da5c07b1cfd22a2",
+      "bytes": 518
+    },
+    {
+      "path": "docs/MVP_REQUIREMENTS_TRACK.md",
+      "sha256": "35cdfa456be25a1718d692afa17dd6c7e25311e55e49526a9a20ee9219825dc5",
+      "bytes": 672
+    },
+    {
+      "path": "docs/NATIVE_MOBILE_ROADMAP.md",
+      "sha256": "a92154031720c5256e19c7c210ce35c6af2189b60d07d3065ffcfc5aafec3b09",
+      "bytes": 473
+    },
+    {
+      "path": "docs/PRODUCT_VISION.md",
+      "sha256": "9f19d9828acabc497290206da68906cd8ed6fe14b7c3dfe3f28d331eff5e3c5e",
+      "bytes": 597
+    },
+    {
+      "path": "docs/REFINED_BUILD_REQUEST.md",
+      "sha256": "38b8e877741ac366416513ec5c588f164a9051e5511bac4ee2f5dab61428fcdb",
+      "bytes": 1735
+    },
+    {
+      "path": "docs/RELEASE_NOTES.md",
+      "sha256": "5d7568c91a2e9b2a1a518db9e590e11af29e145c914da450bdffd071a632ea0d",
+      "bytes": 797
+    },
+    {
+      "path": "docs/SECURITY_PRIVACY.md",
+      "sha256": "e0a7300df42bd5f5aac093bc8b9e634b916a0b99d4574a7caaf1341e87c3ff00",
+      "bytes": 605
+    },
+    {
+      "path": "docs/TEST_PLAN.md",
+      "sha256": "f28dd89f08106c8248a587b7023f04a31cca65b0ebaa0633ee91b14cbaab1212",
+      "bytes": 430
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "00aa8da3a14304105e1afb7a5d698153ba05d413af5e72c50df1b1b0c890a111",
+      "bytes": 53
+    },
+    {
+      "path": "run.bat",
+      "sha256": "54ca829d7c8a4d857a27bb3cb5d94be63ec8c8a7e10b7d1c438119c44e878bba",
+      "bytes": 79
+    },
+    {
+      "path": "run.sh",
+      "sha256": "b302627e0ceb2559cf0d47fca2278fe7446c3d657912caf1b579254e91a06464",
+      "bytes": 96
+    },
+    {
+      "path": "smoke_test_output.txt",
+      "sha256": "9c2ed17c2939db6154382538e0f38ddb8a5e62551a62dbabc26a84266c1a2254",
+      "bytes": 141
+    },
+    {
+      "path": "static/admin.html",
+      "sha256": "4e156d68f5404ac59d163a3950a8be1f3e19cf8cd2e85ebb91baff87cb562e64",
+      "bytes": 1484
+    },
+    {
+      "path": "static/app.css",
+      "sha256": "415f71814200eb39274da231d389cbe08de6fee7328f9d7f43edc0c049dc0de9",
+      "bytes": 5483
+    },
+    {
+      "path": "static/common.js",
+      "sha256": "813bc20d08100f0856330ff298920d95b02eb6c10e38b35fb73cf4ad6f136ca5",
+      "bytes": 1437
+    },
+    {
+      "path": "static/community.js",
+      "sha256": "834a0e3011c99f2db952b70be188a276e9760c23ec1d4967e120dd3200e8e4b3",
+      "bytes": 2904
+    },
+    {
+      "path": "static/community_admin.js",
+      "sha256": "967b2f6e5b257f4e518e99c17cbd6bff931900b3e47f80059168d55952bf3a5a",
+      "bytes": 1803
+    },
+    {
+      "path": "static/icon.svg",
+      "sha256": "1725adac9975537551f65bb9fcb2dbc6342356093a20fd63789ae59cbd8b5ca8",
+      "bytes": 197
+    },
+    {
+      "path": "static/index.html",
+      "sha256": "07dfbd4dff5267988c6966b10d1c47db9310cdc90fbef4ab21141e61d2392076",
+      "bytes": 2654
+    },
+    {
+      "path": "static/manifest.webmanifest",
+      "sha256": "052609801afa7a492b6c13bf06080ba611c770aedaf3895335dc8e44b7249588",
+      "bytes": 318
+    },
+    {
+      "path": "static/sw.js",
+      "sha256": "03ce6048e76371f66e8d6dac4183b9fa2402e09ed08452e0485be887150856c1",
+      "bytes": 429
+    },
+    {
+      "path": "test_output.txt",
+      "sha256": "9c714207acdb4637742c0d3473ba4d87be7b978f65d5b0063c39ad919e6fa9d7",
+      "bytes": 98
+    },
+    {
+      "path": "tests/test_app.py",
+      "sha256": "fa03c2cfe47460a039e8a5ec0685d341a4628fcfc10d3dd3b62db500ed0602aa",
+      "bytes": 949
+    }
+  ]
+}

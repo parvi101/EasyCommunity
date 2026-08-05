@@ -1,0 +1,6 @@
+{
+  "product": "EasyCommunity",
+  "version": "0.1.1",
+  "data_freshness_minutes": 30,
+  "default_hand": "right"
+}
