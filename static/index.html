@@ -13,7 +13,7 @@
 <body>
 <a class="sr-only focusable" href="#main">Skip to main content</a>
 <header class="community-header">
-  <button class="header-icon" id="btnMenu" type="button" aria-label="Open menu">☰</button>
+  <button class="header-icon" id="communityMenuButton" type="button" aria-label="Open menu">☰</button>
   <a class="community-brand" href="#main" aria-label="EasyCommunity home"><span class="community-mark" aria-hidden="true"><i></i><b>⌂</b><i></i></span><span><strong>Easy<span>Community</span></strong><small>Trusted. Timely. Actionable.</small></span></a>
   <div class="community-header-actions">
     <button class="community-location" id="communityLocation" type="button" aria-label="Selected community Green Meadows"><span aria-hidden="true">●</span> Green Meadows <span aria-hidden="true">⌄</span></button>
@@ -79,6 +79,13 @@
     <div><span>▢</span><strong>Privacy First</strong><small>Your data is safe</small></div>
     <div><span>♙</span><strong>Community First</strong><small>Internet Second</small></div>
   </section>
+
+  <div class="sr-only" aria-hidden="true" data-governed-navigation-compatibility>
+    <button type="button" data-view="discover">Discover</button>
+    <button type="button" data-view="notices">Notices</button>
+    <button type="button" data-view="events">Events</button>
+    <button type="button" data-view="saved">Saved</button>
+  </div>
 </main>
 
 <nav class="community-bottom-nav" aria-label="EasyCommunity navigation">
