@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - agent/uat-evidence-validation-2026-08-12
+  pull_request:
+    branches:
+      - audit/easy-council-2026-08-12
   workflow_dispatch:
 
 permissions:
