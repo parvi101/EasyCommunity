@@ -1,1 +1,95 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#1769e0"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/static/app.css"><title>EasyCommunity</title></head><body data-hand="right"><div class="topbar"><div class="topbar-inner"><div class="brand"><span class="brand-mark">EC</span>EasyCommunity</div><span id="health" class="status">Checking…</span><span class="spacer"></span><a class="btn desktop-only" href="/admin">Admin</a><select id="handMode" aria-label="Single-hand mode" style="width:auto"><option value="right">Right hand</option><option value="left">Left hand</option></select></div></div><main class="app-shell"><section class="hero"><h1>Trusted local discovery, without the noise.</h1><p>Search verified services, accessible places, local notices and near-future community impacts. EasyCommunity remains a lightweight reference platform.</p></section><div class="tabs"><button class="tab active" data-view="discover">Discover</button><button class="tab" data-view="notices">Local Notices</button><button class="tab" data-view="events">Events & Impact</button><button class="tab" data-view="saved">Saved</button></div><section id="discover" class="view active"><div class="section-title"><h2>Search the community</h2><span class="muted">Verified status is shown on every listing</span></div><div class="card"><div class="search-row"><input id="q" class="input" placeholder="Search services, places or area"><button id="searchBtn" class="btn primary">Search</button></div></div><div id="listings" class="grid cards" style="margin-top:14px"></div></section><section id="notices" class="view"><div class="section-title"><h2>Verified local notices</h2></div><div id="noticesList" class="list"></div></section><section id="events" class="view"><div class="section-title"><h2>Near-future local impact</h2><span class="muted">Possible effects, not certainty</span></div><div id="eventsList" class="list"></div></section><section id="saved" class="view"><div class="section-title"><h2>Saved items</h2></div><div id="savedList" class="list"></div></section></main><nav class="dock" aria-label="Quick actions"><button data-view="discover">⌕<br><small>Search</small></button><button data-view="notices">!<br><small>Notices</small></button><button data-view="events">◷<br><small>Impact</small></button><button data-view="saved">★<br><small>Saved</small></button></nav><div id="toast" class="toast"></div><script src="/static/common.js"></script><script src="/static/community.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a8f46">
+  <meta name="description" content="EasyCommunity trusted, timely and actionable community information">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/static/app.css">
+  <title>EasyCommunity · Trusted. Timely. Actionable.</title>
+</head>
+<body>
+<a class="sr-only focusable" href="#main">Skip to main content</a>
+<header class="community-header">
+  <button class="header-icon" id="btnMenu" type="button" aria-label="Open menu">☰</button>
+  <a class="community-brand" href="#main" aria-label="EasyCommunity home"><span class="community-mark" aria-hidden="true"><i></i><b>⌂</b><i></i></span><span><strong>Easy<span>Community</span></strong><small>Trusted. Timely. Actionable.</small></span></a>
+  <div class="community-header-actions">
+    <button class="community-location" id="communityLocation" type="button" aria-label="Selected community Green Meadows"><span aria-hidden="true">●</span> Green Meadows <span aria-hidden="true">⌄</span></button>
+    <button class="header-icon notification-button" id="notificationButton" type="button" aria-label="Notifications">♧<span id="notificationBadge" class="notification-badge" hidden></span></button>
+  </div>
+</header>
+
+<main id="main" class="community-shell">
+  <section class="global-search" aria-label="Community search">
+    <span aria-hidden="true">⌕</span>
+    <input id="q" type="search" placeholder="Search for anything in your community..." aria-label="Search for anything in your community">
+    <button id="voiceSearch" type="button" aria-label="Voice search unavailable in this build">🎙</button>
+  </section>
+
+  <section class="service-shortcuts" aria-label="Popular community services">
+    <button class="service-shortcut" data-search="electrician"><span class="shortcut-icon yellow">⚡</span><strong>Electrician</strong></button>
+    <button class="service-shortcut" data-search="plumber"><span class="shortcut-icon blue">♨</span><strong>Plumber</strong></button>
+    <button class="service-shortcut" data-search="security"><span class="shortcut-icon navy">◇</span><strong>Security</strong></button>
+    <button class="service-shortcut" data-search="grocery"><span class="shortcut-icon orange">▥</span><strong>Grocery</strong></button>
+    <button class="service-shortcut" data-search="housekeeping"><span class="shortcut-icon green">✣</span><strong>Housekeeping</strong></button>
+    <button class="service-shortcut" id="moreServices" type="button"><span class="shortcut-icon gray">•••</span><strong>More</strong></button>
+  </section>
+
+  <section id="immediate" class="home-panel immediate-panel" aria-labelledby="immediateHeading">
+    <div class="panel-heading"><div><span class="heading-icon critical" aria-hidden="true"></span><h1 id="immediateHeading">Immediate (Now) — Today</h1></div><button class="panel-link" id="viewAllNotices" type="button">View all</button></div>
+    <div id="noticesList" class="notice-stack" aria-live="polite"><div class="loading-card">Loading trusted notices…</div></div>
+    <div class="trust-note">◇ Information from available sources. Tap an item to review its source and timing.</div>
+  </section>
+
+  <section id="planning" class="home-panel planning-panel" aria-labelledby="planningHeading">
+    <div class="panel-heading"><div><span class="heading-icon calendar" aria-hidden="true">▣</span><h2 id="planningHeading">Planning (Next 7 Days) — Plan Ahead</h2></div><button class="panel-link" id="viewCalendar" type="button">View calendar</button></div>
+    <div id="planningList" class="planning-stack" aria-live="polite"><div class="loading-card">Loading planning signals…</div></div>
+    <div class="planning-note">● Showing current and upcoming high-value information from the available data. Timing-unverified items are labelled clearly.</div>
+  </section>
+
+  <section class="day-planner" aria-labelledby="dayPlannerHeading">
+    <div><h2 id="dayPlannerHeading">Plan your day better</h2><p>Add important dates to your preferred calendar or reminder app.</p><small>▢ EasyCommunity does not need to store your personal reminders.</small></div>
+    <div class="day-actions"><button id="addCalendar" type="button">▣ Add to Calendar</button><button id="createReminder" type="button">♧ Create Reminder</button><button id="sharePlanning" type="button">↗ Share</button></div>
+  </section>
+
+  <section id="discovery" class="home-panel discovery-panel" aria-labelledby="discoveryHeading">
+    <div class="panel-heading"><div><span class="heading-icon discovery" aria-hidden="true"></span><h2 id="discoveryHeading">Discovery (When Needed) — Find & Connect</h2></div><button class="panel-link" id="editDiscovery" type="button">Edit</button></div>
+    <div class="discovery-shortcuts">
+      <button data-search="offer"><span class="discovery-icon">◇</span><strong>Today’s<br>Offerings</strong></button>
+      <button data-search="resale"><span class="discovery-icon purple">♻</span><strong>Resident<br>Resale</strong></button>
+      <button data-search="business"><span class="discovery-icon orange">▰</span><strong>Community<br>Businesses</strong></button>
+      <button data-search="community"><span class="discovery-icon blue">◁</span><strong>Community<br>Updates</strong></button>
+      <button data-search="contact"><span class="discovery-icon green">◉</span><strong>Verified<br>Contacts</strong></button>
+      <button data-search="knowledge"><span class="discovery-icon yellow">☀</span><strong>Community<br>Knowledge</strong></button>
+    </div>
+
+    <div class="connect-banner"><div class="connect-illustration" aria-hidden="true">▯<span>◉</span></div><div><strong>Connect with a Business in one tap</strong><p>Open the available contact channel when a verified listing provides one.</p></div><button id="enquireNow" type="button">Enquire Now ›</button></div>
+
+    <div class="discovery-results-heading"><div><h3>Community results</h3><p id="searchContext" class="muted">Showing available verified and pending listings.</p></div><button id="clearSearch" type="button">Clear search</button></div>
+    <div id="listings" class="listing-grid" aria-live="polite"></div>
+
+    <details class="saved-drawer"><summary>Saved items <span id="savedCount">0</span></summary><div id="savedList" class="saved-list"></div></details>
+  </section>
+
+  <section class="trust-footer" aria-label="EasyCommunity trust signals">
+    <div><span>◇</span><strong>Authentic Sources</strong><small>You Can Trust</small></div>
+    <div><span>◷</span><strong>Last Updated</strong><small id="lastUpdated">Checking…</small></div>
+    <div><span>▢</span><strong>Privacy First</strong><small>Your data is safe</small></div>
+    <div><span>♙</span><strong>Community First</strong><small>Internet Second</small></div>
+  </section>
+</main>
+
+<nav class="community-bottom-nav" aria-label="EasyCommunity navigation">
+  <button class="active" data-scroll="main" type="button">⌂<span>Home</span></button>
+  <button data-scroll="global-search" id="navSearch" type="button">⌕<span>Search</span></button>
+  <button class="post-button" id="navPost" type="button">＋<span>Post</span></button>
+  <button id="navMessages" type="button">◌<span>Messages</span></button>
+  <button id="navProfile" type="button">◎<span>Profile</span></button>
+</nav>
+
+<div id="toast" class="toast" role="status"></div>
+<script src="/static/common.js"></script>
+<script src="/static/community.js"></script>
+</body>
+</html>
