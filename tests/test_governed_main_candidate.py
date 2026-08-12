@@ -100,6 +100,6 @@ def test_current_main_truthfulness_controls_are_preserved():
     app_source = (ROOT / "app.py").read_text(encoding="utf-8")
 
     assert "data_freshness_minutes" in app_source
-    assert "data_state = 'stale'" in app_source
+    assert "data_state = 'live' if age_minutes <= CONFIG['data_freshness_minutes'] else 'stale'" in app_source
     assert "raise HTTPException(status_code=503, detail='Database unavailable')" in app_source
     assert "escape_like" in app_source
