@@ -16,7 +16,7 @@ async function loadListings(){
   try{
     const rows=await api('/api/listings?q='+q);
     $('#searchContext').textContent=$('#q').value.trim()?`Results for “${$('#q').value.trim()}”.`:'Showing available verified and pending listings.';
-    $('#listings').innerHTML=rows.map(r=>`<article class="listing-card"><header><div><h3>${esc(r.name)}</h3><div class="listing-meta">${esc(r.category)} · ${esc(r.area)}</div></div><span class="chip ${r.verified?'ok':'warn'}">${r.verified?'Verified':'Pending'}</span></header><p>${esc(r.description)}</p><div class="listing-meta">Accessibility: ${esc(r.accessibility)}${r.parkeasy_supported?' · ParkEasy supported':''}</div><button type="button" data-save="${r.id}">${saved.includes(r.id)?'★ Saved':'☆ Save'}</button></article>`).join('')||'<div class="loading-card">No matching community information found. Try a broader service, place or area.</div>';
+    $('#listings').innerHTML=rows.map(r=>`<article class="listing-card"><header><div><h3>${esc(r.name)}</h3><div class="listing-meta">${esc(r.category)} · ${esc(r.area)}</div></div><span class="chip ${r.verified?'ok':'warn'}">${r.verified?'Verified':'Pending'}</span></header><p>${esc(r.description)}</p><div class="listing-meta">Accessibility: ${esc(r.accessibility)}${r.parkeasy_supported?' · ParkEasy supported':''}</div><button type="button" data-save="${r.id}">${saved.includes(r.id)?'★ Saved':'☆ Save'}</button></article>`).join('')||'<div class="loading-card">No matching entries. Try a broader service, place or area.</div>';
     $$('[data-save]').forEach(b=>b.onclick=()=>saveItem(Number(b.dataset.save)));
   }catch(e){$('#listings').innerHTML=`<div class="loading-card">Listings unavailable: ${esc(e.message)}</div>`}
 }
@@ -45,7 +45,7 @@ async function loadSaved(){
 }
 function applySearch(term){$('#q').value=term;loadListings();$('#discovery').scrollIntoView({behavior:'smooth'});}
 function setupPrototypeActions(){
-  $('#btnMenu').onclick=()=>toast('The primary resident journeys are already available on this home screen; secondary menu options will be added only when needed.');
+  $('#communityMenuButton').onclick=()=>toast('The primary resident journeys are already available on this home screen; secondary menu options will be added only when needed.');
   $('#communityLocation').onclick=()=>toast('Green Meadows is the current demonstration community context. Multi-community switching is not enabled yet.');
   $('#notificationButton').onclick=()=>toast('No unread notification count is being claimed in this development build.');
   $('#voiceSearch').onclick=()=>toast('Voice search is not enabled in this development build.');
