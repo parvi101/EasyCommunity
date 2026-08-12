@@ -44,8 +44,9 @@ def test_actual_governed_navigation_is_wired():
 
 def test_uat_report_obsolete_controls_are_not_in_governed_candidate():
     html = (ROOT / 'static' / 'index.html').read_text(encoding='utf-8')
-    js = (ROOT / 'static' / 'community.js').read_text(encoding='utf-8')
-    combined = html + '\n' + js
+    community = (ROOT / 'static' / 'community.js').read_text(encoding='utf-8')
+    common = (ROOT / 'static' / 'common.js').read_text(encoding='utf-8')
+    combined = html + '\n' + community + '\n' + common
 
     for obsolete_marker in [
         'btnMenu',
@@ -53,8 +54,25 @@ def test_uat_report_obsolete_controls_are_not_in_governed_candidate():
         'View all alerts',
         'Alert chevron',
         'Plan ▾',
+        'refreshDividers',
+        'notif-badge',
+        'Water Supply Restored',
     ]:
         assert obsolete_marker not in combined
+
+
+def test_governed_candidate_uses_backend_api_not_hardcoded_alert_arrays():
+    app_source = (ROOT / 'app.py').read_text(encoding='utf-8')
+    community = (ROOT / 'static' / 'community.js').read_text(encoding='utf-8')
+
+    assert "@app.get('/api/listings')" in app_source
+    assert "@app.get('/api/notices')" in app_source
+    assert "@app.get('/api/events')" in app_source
+    assert "api('/api/listings" in community
+    assert "api('/api/notices')" in community
+    assert "api('/api/events')" in community
+    assert 'const ALERTS' not in community
+    assert 'const PLANS' not in community
 
 
 def test_static_client_javascript_escapes_api_content():
